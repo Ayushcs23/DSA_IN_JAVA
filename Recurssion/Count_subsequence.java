@@ -4,6 +4,7 @@ public class Count_subsequence {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
 		String ques="abc";
 		//printsubsequence(ques,"");
 		//System.out.print(count);

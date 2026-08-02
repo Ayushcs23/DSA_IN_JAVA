@@ -2,55 +2,37 @@ package Leetcode_Questions;
 
 public class Sort_colors75 {
 
-//	public static void main(String[] args) {
-//		// TODO Auto-generated method stub
-//		int arr[]={0,1,1,1,0,0,1,1,0};
-//		sort(arr);
-//		
-//	}
-//	public static void sort(int arr[]) {
-//		int i =0;
-//		int j=arr.length-1;
-//		while(i<j) {
-//			if(arr[i]==0) {
-//				i++;
-//			}
-//			else if(arr[j]==1) {
-//				j--;
-//			}
-//			else {
-//				arr[i]=0;
-//				arr[j]=1;
-//				i++;
-//				j--;
-//			}
-//		}
-//		for(int val:arr) {
-//			
-//			System.out.print(val+" ");
-//		}
-//	}
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-		int arr[]={0,2,1,2,0,1,2,1};
-		int i=-1;
-		int j=0;
-		int k=arr.length-1;
-		sort(arr);
-	}
-	public static void sort(int arr[]) {
-		int j=0;
-		int k=arr.length-1;
-		while(j<k) {
-			if(arr[k]==2) {
-				k--;
-			}
-			else if(arr[j]==1) {
-				j++;
-			}
-			else if(arr[i+1]) {
-				
-			}
-		}
-	}
+    public static void main(String[] args) {
+        int[] arr = {0, 2, 1, 2, 0, 1, 2, 1};
+        sort(arr);
+
+        for (int val : arr) {
+            System.out.print(val + " ");
+        }
+    }
+
+    public static void sort(int[] arr) {
+        int low = 0;
+        int mid = 0;
+        int high = arr.length - 1;
+
+        while (mid <= high) {
+            if (arr[mid] == 0) {
+                swap(arr, low, mid);
+                low++;
+                mid++;
+            } else if (arr[mid] == 1) {
+                mid++;
+            } else {
+                swap(arr, mid, high);
+                high--;
+            }
+        }
+    }
+
+    private static void swap(int[] arr, int i, int j) {
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
 }

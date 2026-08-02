@@ -4,7 +4,7 @@ public class N_Queen {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int n=4;
+		int n=6;
 		boolean Board[][]=new boolean[n][n];
 		Printpath(Board,0,n);
 		

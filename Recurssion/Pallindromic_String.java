@@ -4,7 +4,7 @@ public class Pallindromic_String {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		String s="Nitin";
+		String s="nitin";
 		System.out.print(countPallindromic_substring(s));
 	}
 
@@ -32,3 +32,30 @@ public class Pallindromic_String {
 	}
 
 }
+//One more methods to find the pallindromic substring is to use recurssion
+
+// class Solution {
+//     public int countSubstrings(String s) {
+//         int n=s.length();
+//         int ans=0;
+//         for(int i=0;i<s.length();i++){
+//             // odd
+          
+//             ans+=helper(s,i,i);
+//             //even 
+//            ans+=helper(s,i,i+1);
+
+//         }
+//         return ans;
+//     }
+//     public int helper(String s,int l,int r){
+//         int count=0;
+//         while(l>=0 && r<s.length() && s.charAt(l)==s.charAt(r)){
+//             l--;
+//             r++;
+//             count++;
+//         }
+//         return count;
+//     }
+// }
+
